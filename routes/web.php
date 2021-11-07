@@ -12,17 +12,46 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+View::composer('*', function($view){
+    View::share('view_name', $view->getName());
+});
 Route::get('/', function () {
-    return view('welcome');
+
+    return view('home');
 });
 Route::get('/contact', function () {
     return view('contact');
 });
-Route::get('/bonjour/{nom_du_parametre_get}', function () {
-    $nom_dans_la_fonction_anonyme = request('nom_du_parametre_get');
-
-    return view('bonjour', [
-        'nom_dans_la_vue' => $nom_dans_la_fonction_anonyme,
-    ]);
+Route::get('/equipe', function () {
+    return view('equipe');
+});
+Route::get('/actualites', function () {
+    return view('actualites');
+});
+Route::get('/actualite', function () {
+    return view('actualite');
+});
+Route::get('/sitemap', function () {
+    return view('sitemap');
+});
+Route::get('/legal', function () {
+    return view('legal');
+});
+Route::get('/confidentialite', function () {
+    return view('confidentialite');
+});
+Route::get('/services/informatique', function () {
+    return view('services/informatique');
+});
+Route::get('/services', function () {
+    return view('services/index');
+});
+Route::get('/services/sysnum', function () {
+    return view('services/sysnum');
+});
+Route::get('/services/photonique', function () {
+    return view('services/photonique');
+});
+Route::fallback(function() {
+    return view('404'); // la vue 404.blade.php
 });

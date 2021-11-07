@@ -1,0 +1,30 @@
+section {
+    .navigationZone {
+        margin-bottom: 0;
+        color: var(--clr-gray-700);
+    }
+
+    .page {
+        color: var(--darkblue);
+        margin-left: 0.5rem;
+        font-size: 1.2rem;
+    }
+    
+    .page:not(:last-of-type)::after {
+        content: "❯";
+        margin-left: 0.5rem;
+        text-emphasis: none;
+        user-select: none;
+        -moz-user-select: none;
+    }
+    
+    a {
+        text-decoration: none;
+        user-select: none;
+        -moz-user-select: none;
+    }
+    
+    .page:hover span {
+        color: var(--clr-jesorange);
+    }
+}

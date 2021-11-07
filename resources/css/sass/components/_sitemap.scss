@@ -1,0 +1,21 @@
+section.siteMap {
+    a {
+        color: var(--clr-gray-800);
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    
+    .siteMapBox {
+        border-left: solid 1px var(--clr-gray-800);
+        margin: 1.2rem 0.5rem;
+        padding-left: 1.5rem;
+        color: var(--clr-gray-800);
+        
+        p {
+            margin: 0.3rem 0;
+        }
+    }
+}

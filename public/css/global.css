@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+    --clr-jesblue: hsl(224, 94%, 19%);
+    --clr-jesorange: hsl(21, 82%, 51%);
+
+    /* orange */
+    --clr-emph1-900: hsl(21, 60%, 10%);
+    --clr-emph1-800: hsl(21, 60%, 17%);
+    --clr-emph1-700: hsl(21, 60%, 28%);
+    --clr-emph1-600: hsl(21, 60%, 39%);
+    --clr-emph1-500: hsl(21, 60%, 50%);
+    --clr-emph1-400: hsl(21, 60%, 61%);
+    --clr-emph1-300: hsl(21, 60%, 72%);
+    --clr-emph1-200: hsl(21, 60%, 83%);
+    --clr-emph1-100: hsl(21, 60%, 90%);
+
+    /* dark blue */
+    --clr-emph2-900: hsl(224, 60%, 10%);
+    --clr-emph2-800: hsl(224, 60%, 17%);
+    --clr-emph2-700: hsl(224, 60%, 28%);
+    --clr-emph2-600: hsl(224, 60%, 39%);
+    --clr-emph2-500: hsl(224, 60%, 50%);
+    --clr-emph2-400: hsl(224, 60%, 61%);
+    --clr-emph2-300: hsl(224, 60%, 72%);
+    --clr-emph2-200: hsl(224, 60%, 83%);
+    --clr-emph2-100: hsl(224, 60%, 90%);
+
+    /* gray */
+    --clr-gray-900: hsl(220, 6%, 10%);
+    --clr-gray-800: hsl(220, 5%, 17%);
+    --clr-gray-700: hsl(220, 5%, 28%);
+    --clr-gray-600: hsl(220, 5%, 39%);
+    --clr-gray-500: hsl(220, 5%, 50%);
+    --clr-gray-400: hsl(220, 5%, 61%);
+    --clr-gray-300: hsl(220, 5%, 72%);
+    --clr-gray-200: hsl(220, 5%, 83%);
+    --clr-gray-100: hsl(220, 5%, 90%);
+
+
+    --font-body: "Atkinson Hyperlegible", sans-serif;
+    --font-title:  "Open Sans", sans-serif;
+
+    /* breakpoints */
+    --mobile-breakpoint: 900px;
+    --desktop-breakpoint: 1100px;
+
+    /* images sources */
+    --homepage-bg-url: url("/../images/pictures/homepage-bg_new.png");
+    --digital-illustration-url: url("/../images/pictures/digital-illustration.png");
+}

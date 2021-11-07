@@ -1,0 +1,31 @@
+.button {
+    width: 8rem;
+    padding: 1rem 1.5rem;
+    background-color: var(--clr-jesorange);
+    outline-color: var(--clr-jesorange);
+    color: white;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: all 100ms ease-in-out;
+
+    &:hover:not(.fancy) {
+        background-color: var(--clr-emph1-700);
+    }
+
+    &.light {
+        color: var(--clr-jesblue);
+        background-color: white;
+        outline-color: white;
+    }
+
+    &.fancy {
+        outline-style: solid;
+        outline-width: 2px;
+        outline-offset: 5px;
+
+        &:hover {
+            outline-offset: 10px;
+        }
+    }
+}

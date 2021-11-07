@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    scrollbar-color: var(--clr-gray-700) var(--clr-gray-400);
+    scrollbar-width: thin;
+}
+
+::-webkit-scrollbar {width: 7px;}
+::-webkit-scrollbar-track {background: var(--clr-gray-400);}
+::-webkit-scrollbar-thumb {background: var(--clr-gray-700);}
+
+:root {
+    scroll-behavior: smooth;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    user-select: none;
+    -moz-user-select: none;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+body {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light);
+}
+
+main, .main {
+    flex: 1;
+    width: 100%;
+}
+
+.contentsZone, .navigationZone {
+    flex: 1;
+    width: 100%;
+    max-width: var(--desktop-breakpoint);
+    height: 100%;
+    margin: 3rem 0 5rem 0;
+
+    user-select: text;
+    -moz-user-select: text;
+    
+    & :first-child {
+        margin-top: 0;
+    }
+}
+
+section {
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &.gray {
+        background-color: var(--clr-gray-100);
+    }
+
+    &.blue {
+        background-color: var(--clr-emph2-100);
+    }
+
+    &.orange {
+        background-color: var(--clr-emph1-100);
+    }
+
+    &.image-bg {
+        position: relative;
+        padding-top: 35rem;
+        &::before {
+            content: "";
+            display: block;
+            width: 100%;
+            height: 50vw;
+            min-height: 50rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+            
+            background-image: var(--bg-img-url);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        &>* {
+            z-index: 1;
+            background-color: white;
+            box-shadow: 0 0 0 3rem white;
+        }
+    }
+}
+
+.foreground {
+    z-index: 5;
+}
+
+.slanted-container {
+    position: relative;
+    filter: drop-shadow(0 -5px 5px #00000050) drop-shadow(0 5px 5px #00000050);
+    background-color: white;
+    border-top: solid 1px white;
+    border-bottom: solid 1px white;
+
+    &:before, &:after {
+        content: "";
+        width: 100%;
+        height: 7vw;
+        position: absolute;
+        bottom: 100%;
+        clip-path: polygon(0 0, 0 100%, 100% 100%);
+        background-color: inherit;
+    }
+
+    &:after {
+        top: 100%;
+        clip-path: polygon(0 0, 0 100%, 100% 0%);
+    }
+
+    &.mirror {
+        &:before, &:after {
+            clip-path: polygon(0 100%, 100% 0, 100% 100%);
+        }
+    
+        &:after {
+            clip-path: polygon(0 0, 100% 0, 100% 100%);
+        }
+    }
+}
